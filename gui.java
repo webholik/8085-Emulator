@@ -197,87 +197,12 @@ public class gui {
         // left = new JPanel(new GridBagLayout());
         left.setPreferredSize(new Dimension(300, 700));
 
-        // JLabel registerTitle = new JLabel("REGISTERS",SwingConstants.CENTER);
-        // JLabel flagTitle = new JLabel("FLAGS");
         registerLeftPanel = new JPanel(new GridLayout(1, 2, 20, 0));
         registerLeftPanel.setPreferredSize(new Dimension(300, 300));
-        // registerLeftPanel.add(registerTitle);
         memory = create_table();
-        // memory.createDefaultEditors();
-        // memory.setSize(300, 300);
-        // memory.setPreferredSize(new Dimension(300, 400));
+
         JScrollPane memory_pane = new JScrollPane(memory);
         memory_pane.setPreferredSize(new Dimension(300, 400));
-
-        // registerPanel = new JPanel(new GridLayout(nRegisterRows + 1, 1, 0, 0));
-        // registerPanel.add(registerTitle);
-        // registerPanel.setSize(120, 400);
-
-        // flagPanel = new JPanel(new GridLayout(6, 1, 0, 0));
-        // flagPanel.setSize(80, 400);
-        // flagPanel.add(flagTitle);
-
-        // flagRowPanels = new JPanel[5];
-        // String[] flags = { "S", "Z", "AC", "P", "CY" };
-        // flagLabels = new JLabel[5];
-        // flagValueLabels = new JLabel[5];
-        // for (int i = 0; i < 5; i++) {
-        //     flagRowPanels[i] = new JPanel(new GridLayout(1, 2, 5, 0));
-        //     flagLabels[i] = new JLabel(flags[i]);
-        //     flagLabels[i].setFont(new Font("Arial", Font.PLAIN, 13));
-        //     flagValueLabels[i] = new JLabel("0");
-        //     flagValueLabels[i].setFont(new Font("Arial", Font.PLAIN, 13));
-        //     flagRowPanels[i].add(flagLabels[i]);
-        //     flagRowPanels[i].add(flagValueLabels[i]);
-        //     flagPanel.add(flagRowPanels[i]);
-        // }
-
-        // registerRowPanels = new JPanel[nRegisterRows];
-        // for (int i = 0; i < nRegisterRows; i++) {
-        //     registerRowPanels[i] = new JPanel(new GridLayout(1, 2, 5, 0));
-        //     registerRowPanels[i].setSize(120, 20);
-        //     // registerPanel.add(registerRowPanels[i]);
-        // }
-
-        // registerLabels = new JLabel[nRegisterRows];
-        // String labels[] = { "A", "B C", "D E", "H L", "S P" };
-        // for (int i = 0; i < nRegisterRows; i++) {
-        //     registerLabels[i] = new JLabel(labels[i]);
-        //     registerLabels[i].setFont(new Font("Arial", Font.PLAIN, 13));
-        //     registerLabels[i].setSize(40, 15);
-        //     // registerRowPanels[i].add(registerLabels[i]);
-        // }
-
-        // registerColPanels = new JPanel[nRegisterRows - 1];
-        // for (int i = 0; i < nRegisterRows - 1; i++) {
-        //     registerColPanels[i] = new JPanel(new GridLayout(1, 2, 15, 0));
-        //     // registerColPanels[i] = new JPanel(new FlowLayout());
-        //     // registerColPanels[i].setSize(100, 35);
-        //     // registerRowPanels[i + 1].add(registerColPanels[i]);
-        // }
-
-        // registerValueLabels = new JLabel[2 * nRegisterRows - 1];
-        // for (int i = 0; i < (2 * nRegisterRows - 1); i++) {
-        //     registerValueLabels[i] = new JLabel("0");
-        //     registerValueLabels[i].setFont(new Font("Arial", Font.PLAIN, 13));
-        //     registerValueLabels[i].setSize(40, 15);
-        //     if (i > 0) {
-        //         registerColPanels[(i + 1) / 2 - 1].add(registerValueLabels[i]);
-        //     }
-        // }
-
-        // for (int i = 0; i < nRegisterRows; i++) {
-        //     registerRowPanels[i].add(registerLabels[i]);
-
-        //     if (i > 0) {
-        //         registerRowPanels[i].add(registerColPanels[i - 1]);
-        //     } else {
-        //         registerRowPanels[i].add(registerValueLabels[0]);
-        //     }
-
-        //     registerPanel.add(registerRowPanels[i]);
-
-        // }
 
         editor = new JEditorPane();
         editor.putClientProperty(JEditorPane.HONOR_DISPLAY_PROPERTIES, Boolean.TRUE);

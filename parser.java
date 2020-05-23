@@ -76,7 +76,7 @@ public class parser {
     static public void parse(String s, int low, int high) {
         var out = new ArrayList<String>();
         int inc = 1;
-        // System.out.println(s);
+
         var a = s.split(" |,|\t");
         for (var b : a) {
             if (b.length() != 0) {
@@ -86,7 +86,7 @@ public class parser {
         if (out.size() == 0) {
             return;
         }
-        // System.out.println("Out = " + out);
+
         String opcode = out.get(0);
         if (opcode.charAt(opcode.length() - 1) == ':') {
             jump_list.put(opcode.substring(0, opcode.length() - 1), ins_list.size());
@@ -99,7 +99,7 @@ public class parser {
             System.out.println("Instruction not found");
         } else {
             int arg_size = argument_type.length;
-            // System.out.println("argument size = " + arg_size);
+
             if (out.size() != arg_size + inc) {
                 System.out.println("Error");
             }
@@ -209,8 +209,7 @@ public class parser {
         ins_list.clear();
         jump_list.clear();
         process(s);
-        // System.out.println(ins_list);
-        // System.out.println(jump_list);
+
         update_registers();
         shouldHighlight = true;
         i = 0;
@@ -260,11 +259,6 @@ public class parser {
         SwingUtilities.invokeLater(() -> {
             new gui();
         });
-        // String a = s.nextLine();
-        /*
-         * try { // System.out.println("GIven -> " + a); while (true) { String a =
-         * s.nextLine(); parse(a); } } catch (java.util.NoSuchElementException e) { //
-         * Do nothing } // var k = parse(a); machine.print_registers();
-         */
+
     }
 }

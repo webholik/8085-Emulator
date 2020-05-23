@@ -5,9 +5,7 @@ class machine {
     static byte[] mem = new byte[65536]; 
 
     static void initialize() {
-        // for(int i=0; i<65536; i++) {
-        //     mem[i] = 0;
-        // }
+
         registers.put("A", (byte)0);
         registers.put("B", (byte)0);
         registers.put("C", (byte)0);
